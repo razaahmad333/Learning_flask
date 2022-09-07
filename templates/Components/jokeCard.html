@@ -1,0 +1,22 @@
+{% macro jokeCard(joke) -%}
+<div class="card my-4 shadow">
+    <div class="card-body p-4 ">
+        <h4>{{ joke.category }}</h4>
+        {% if joke.type=="single" %}
+        {{joke.id}}
+        {{ joke.joke }}
+        {% else %}
+        <p>
+            {{joke.id}}
+            {{ joke.setup }}
+
+        </p>
+        <br>
+        <p class="pt-3">
+            {{ joke.delivery }}
+
+        </p>
+        {% endif %}
+    </div>
+</div>
+{%- endmacro %}

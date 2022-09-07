@@ -1,0 +1,10 @@
+
+{% macro renderCategories(categories) -%}
+<div class="d-flex justify-content-around">
+    {% for category in categories %}
+        <div class="">
+            <a href="/jokes/{{category}}">{{ category }}</a>
+        </div>
+    {% endfor %}
+</div>
+{%- endmacro %}

@@ -1,0 +1,12 @@
+{% from "Components/jokeCard.html" import jokeCard %}
+
+{% macro jokeArray(jokes) -%}
+<div class="col-sm-12 col-lg-3">
+    
+    {% for joke in jokes %}
+        {{ jokeCard(joke) }}
+    {% endfor %}
+
+</div>
+
+{%- endmacro %}
